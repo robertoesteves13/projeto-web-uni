@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Tarefa } from "./tarefa";
 import { HttpClient } from '@angular/common/http';
 
@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'TODOapp';
 
   arrayDeTarefas: Tarefa[] = [];
@@ -15,6 +15,9 @@ export class AppComponent {
 
   constructor(private http: HttpClient) {
     this.apiURL = "https://tp-backend-production.up.railway.app";
+  }
+
+  ngOnInit() {
     this.READ_tarefas();
   }
 
