@@ -14,7 +14,7 @@ export class AppComponent {
   apiURL: string;
 
   constructor(private http: HttpClient) {
-    this.apiURL = "https://tp-backend.railway.internal";
+    this.apiURL = "https://tp-backend-production.up.railway.app";
     this.READ_tarefas();
   }
 
