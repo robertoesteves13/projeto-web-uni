@@ -46,6 +46,8 @@
           },
           "configurations": {
             "production": {
+              "ssr": false,
+              "prerender": false,
               "budgets": [
                 {
                   "type": "initial",
@@ -61,6 +63,8 @@
               "outputHashing": "all"
             },
             "development": {
+              "ssr": false,
+              "prerender": false,
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
